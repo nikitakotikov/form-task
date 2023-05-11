@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+
+
+</head>
+
+<body>
+
+    <form class="form" action="#">
+        <legend class="form__title">
+            <strong>Зарегистрируйтесь</strong> и&nbsp;начните продавать услуги через интернет сегодня
+        </legend>
+        <fieldset class="form__inner flex">
+            <div class="form__name-wrapper flex">
+                <label class="form__label">
+                    <p class="form__subtitle">
+                        Имя
+                    </p>
+                    <input type="text" placeholder="Сергей" class="form__input">
+                </label>
+                <label class="form__label">
+                    <p class="form__subtitle">
+                        Фамилия
+                    </p>
+                    <input type="text" placeholder="Миргород" class="form__input">
+                </label>
+            </div>
+            <div class="form__profession-wrapper">
+                <label for="profession-input" class="form__label">
+                    <p class="form__subtitle">
+                        Профессия
+                    </p>
+                    <div class="dropdown">
+                        <input type="text"  id="seacrh" onkeyup="myFunction()"
+                            class="search-input form__input form__input--long" placeholder="Введите профессию">
+                        <ul class="dropdown__list" id="dropdowns">
+                            <li class="dropdown__item">Повар</li>
+                            <li class="dropdown__item">Сантехник</li>
+                            <li class="dropdown__item">Водитель</li>
+                            <li class="dropdown__item">Верстальщик</li>
+                            <li class="dropdown__item">Дизайнер</li>
+                            <li class="dropdown__item">Маркетолог</li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+            <div class="form__tel-wrapper ">
+                <p class="form__subtitle">
+                    Телефон
+                </p>
+                <div class="form__label flex">
+                    <div class="custom-select form__select" id="country" aria-hidden="true">
+                        <button type="button" class="selected-item" data-value="7" aria-hidden="true">
+                            <img class="selected-image" src="img/russia.png" alt="rus">
+                        </button>
+                        <div class="options">
+                            <div class="option" data-value="7" aria-hidden="true">
+                                <img src="img/russia.png" alt="rus">
+                            </div>
+                            <div class="option" data-value="1" aria-hidden="true">
+                                <img src="img/usa.png" alt="usa">
+                            </div>
+                            <div class="option" data-value="44" aria-hidden="true">
+                                <img src="img/uk.png" alt="uk">
+                            </div>
+                            <div class="option" data-value="33" aria-hidden="true">
+                                <img src="img/france.jpg" alt="france">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" id="phone" name="phone" class="form__input form__input--tel">
+                </div>
+            </div>
+            <button class="form__btn" type="submit">Зарегистрироваться</button>
+        </fieldset>
+    </form>
+
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
